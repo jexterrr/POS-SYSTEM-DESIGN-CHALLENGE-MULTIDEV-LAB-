@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+
+        <title>Canteen of The EAC Millions!</title>
+    </head>
+    <body>
+        <div class="m-3 card card-primary">
+            <div class="m-4 card">
+                <h3 class="text-center card-title mt-2">Menu</h3>
+                <h6 class="text-center card-subtitle mb-3 text-muted">
+                    Please select a menu.
+                </h6>
+                <div class="row justify-content-around mb-3 mx-3">
+                    <!--Foods-->
+                    <div class="col-lg-5 m-1">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="text-center mb-2">Foods</h6>
+                                <ul class="list-group m-1" id="foods">
+                                    <li
+                                        class="list-group-item list-group-item-success"
+                                    >
+                                        Burger
+                                        <span style="float: right">₱25</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item list-group-item-success"
+                                    >
+                                        Fries
+                                        <span style="float: right">₱15</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item list-group-item-success"
+                                    >
+                                        Fishbook
+                                        <span style="float: right">₱1.50</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item list-group-item-success"
+                                    >
+                                        Kwek-Kwek
+                                        <span style="float: right">₱5</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Drinks-->
+                    <div class="col-lg-5 m-1">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="text-center mb-2">Drinks</h6>
+                                <ul class="list-group m-1" id="drinks">
+                                    <li
+                                        class="list-group-item list-group-item-info"
+                                    >
+                                        Coca-cola
+                                        <span style="float: right">₱20</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item list-group-item-info"
+                                    >
+                                        Rc
+                                        <span style="float: right">₱18</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item list-group-item-info"
+                                    >
+                                        Coffee
+                                        <span style="float: right">₱30</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item list-group-item-info"
+                                    >
+                                        Mineral Water
+                                        <span style="float: right">₱10</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card m-4">
+                <h3 class="text-center mb-2 mt-3">Make an Order</h3>
+                <div class="card-body lagayan justify-content-around py-0">
+                    <div
+                        class="row m-3 card"
+                        id="card_1"
+                        style="background-color: #00000029"
+                    >
+                        <div class="row justify-content-around">
+                            <div class="col-md-5">
+                                <label for="orders" class="pt-3 pb-0"
+                                    >Choose Order:</label
+                                >
+                                <select
+                                    name="orders"
+                                    id="orderList"
+                                    class="form-control mb-3 mt-1"
+                                >
+                                    <option value="">Select Order</option>
+                                    <option value="25">Burger</option>
+                                    <option value="15">Fries</option>
+                                    <option value="1.50">Fishbook</option>
+                                    <option value="5">Kwek-Kwek</option>
+                                    <option value="20">Coca-cola</option>
+                                    <option value="18">Rc</option>
+                                    <option value="30">Coffee</option>
+                                    <option value="10">Mineral Water</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="quantity" class="pt-3 pb-0"
+                                    >Quantity:</label
+                                >
+                                <input
+                                    type="number"
+                                    class="quantity form-control mb-3 mt-1"
+                                    min="1"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn m-4 mt-1 p-0 AddOrder"
+                    style="height: 25px; background-color: #d1e7dd"
+                >
+                    +
+                </button>
+
+                <div class="m-4 my-1">
+                    <hr />
+                </div>
+
+                <div class="mt-2">
+                    <div class="row m-4 mt-0">
+                        <div class="col-md-5">
+                            <label for="Total" class="pt-3 pb-0"
+                                >Total orders:</label
+                            >
+                            <input
+                                type="text"
+                                class="Total form-control mb-3 mt-1"
+                                min="1"
+                                disabled="true"
+                            />
+                        </div>
+                        <div class="col-md-5">
+                            <label for="bayad" class="pt-3 pb-0"
+                                >Bayad ka tol:</label
+                            >
+                            <input
+                                type="number"
+                                class="bayad form-control mb-3 mt-1"
+                                min="1"
+                            />
+                        </div>
+                        <div
+                            class="col-md-2 p-0 d-flex justify-content-center align-items-center"
+                        >
+                            <button
+                                type="submit"
+                                class="pay btn px-5 mt-4"
+                                style="background-color: #d1e7dd"
+                            >
+                                Pay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+        <script src="app.js"></script>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
